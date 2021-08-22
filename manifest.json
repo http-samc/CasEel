@@ -13,13 +13,14 @@
     },
     "permissions": [
         "tabs",
-        "*://*/*"
+        "http://courseware.illinois.edu/*",
+        "https://courseware.illinois.edu/*"
     ],
     "content_scripts": [
         {
             "matches": [
-                "http://*/*",
-                "https://*/*"
+                "http://courseware.illinois.edu/*",
+                "https://courseware.illinois.edu/*"
             ],
             "js": [
                 "assets/js/contentScript.js"

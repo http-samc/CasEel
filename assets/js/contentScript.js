@@ -1,31 +1,38 @@
 function saveNotebook() {
     /*
-        Saves the currently opened NetMath notebook
+        Saves all opened NetMath notebooks
             Only works on https://courseware.illinois.edu/*
-            Finds save button by XPATH and sends a click to it
-            Does not handle timing of the saves (1 call => 1 save)
+            Finds save button by going into each noteboook iframe and using ID (then .click() ing)
+            Does not handle timing of the saves (1 call => 1 save per opened notebook)
     */
 
     chrome.tabs.executeScript({
         code: `
-        let saveButton = document.evaluate('//*[@id="ext-gen22"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-        saveButton.click();
-            `
+        var iframes = [... document.getElementsByTagName("iframe")];
+        Array.prototype.forEach.call(iframes, iframe => {
+            try {
+                iframe.contentDocument.getElementById("ext-gen22").click();
+            }
+            catch (e) {
+                return;
+            }
+        });
+        `
     });
 }
 
 function sleep(s) {
-    return new Promise(resolve => setTimeout(resolve, s/1000));
+    return new Promise(resolve => setTimeout(resolve, s*1000));
 };
 
 async function autoSave() {
-    let delay = parseInt(document.getElementById("interval").value);
-    console.log(`Waiting ${delay} seconds to save . . .`)
+    //let delay = parseInt(document.getElementById("interval").value);
+    //console.log(`Waiting ${delay} seconds to save . . .`)
     while (true) {
-        await sleep(delay);
+        await sleep(5);
         saveNotebook();
         console.log(`Saved!`)
     };
 };
 
-document.getElementById("start").addEventListener("click", autoSave());
+autoSave();
