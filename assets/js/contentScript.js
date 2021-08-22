@@ -6,10 +6,15 @@ function saveNotebook() {
             Does not handle timing of the saves (1 call => 1 save per opened notebook)
     */
 
-    chrome.tabs.executeScript({
-        file: 'assets/js/saveNotebooks.js'
-    });
-}
+    try {
+        chrome.tabs.executeScript({
+            file: 'assets/js/saveNotebooks.js'
+        });
+    }
+    catch (e) {
+        return;
+    };
+};
 
 function sleep(s) {
     return new Promise(resolve => setTimeout(resolve, s*1000));
