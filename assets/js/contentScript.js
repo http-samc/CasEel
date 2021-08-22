@@ -7,17 +7,7 @@ function saveNotebook() {
     */
 
     chrome.tabs.executeScript({
-        code: `
-        var iframes = [... document.getElementsByTagName("iframe")];
-        Array.prototype.forEach.call(iframes, iframe => {
-            try {
-                iframe.contentDocument.getElementById("ext-gen22").click();
-            }
-            catch (e) {
-                return;
-            }
-        });
-        `
+        file: 'assets/js/saveNotebooks.js'
     });
 }
 
