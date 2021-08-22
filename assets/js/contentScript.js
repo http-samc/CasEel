@@ -16,13 +16,20 @@ function sleep(s) {
 };
 
 async function autoSave() {
-    //let delay = parseInt(document.getElementById("interval").value);
-    //console.log(`Waiting ${delay} seconds to save . . .`)
     while (true) {
-        await sleep(5);
+        var delay = parseInt(document.getElementById("interval").value);
+        console.log(`Waiting ${delay} seconds to save . . .`);
+
+        await sleep(delay);
         saveNotebook();
         console.log(`Saved!`)
     };
 };
 
-autoSave();
+window.onload = function() {
+    let start = document.getElementById("start");
+    start.addEventListener("click", function () {
+        console.log("Starting autosaver!");
+        autoSave();
+    });
+};
