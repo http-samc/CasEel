@@ -15,7 +15,7 @@ It's free to use and available on the Chrome Webstore.
 ## Legal Disclaimers
 CasEel is not associated with, nor endorsed by, the University of Illinois. "NetMath" is the registered trademark of the Board of Trustees of the University of Illinois.
 
-This software is released under the BSD 3 Clause license. You may use it commercially, modify the code, distribute the code, and place warranty on the code. You may not Trademark the code nor hold Samarth Chitgopekar, CasEel, or any contributors liable. You **must** include credit (Copywright 2021 Samarth Chitgopekar) and include the license ("LICENSE") which you should read for more details.
+This software is released under the BSD 3 Clause license. You may use it commercially, modify the code, distribute the code, and place warranty on the code. You may not Trademark the code nor hold Samarth Chitgopekar, CasEel, or any contributors liable. You **must** include credit (Copyright 2021 Samarth Chitgopekar) and include the license ("LICENSE") which you should read for more details.
 
 ## Contributing
 If you can help acomplish any of the TODO's, please make a PR!
