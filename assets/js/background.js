@@ -7,7 +7,7 @@ function saveNotebook() {
     */
 
     try {
-        chrome.tabs.executeScript({
+        chrome.scripting.executeScript({
             file: "assets/js/saveNotebooks.js"
         }, function() {
             if (chrome.runtime.lastError) {
