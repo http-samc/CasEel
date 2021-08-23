@@ -2,7 +2,7 @@
 var iframes = [... document.getElementsByTagName("iframe")];
 
 // Iterate over each iframe in the array
-Array.prototype.forEach.call(iframes, iframe => {
+Array.prototype.forEach.call(iframes, (iframe) => {
     try {
         // try finding the save button (id = ext-gen22) in each iframe document
         // and then click it

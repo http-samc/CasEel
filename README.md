@@ -27,3 +27,4 @@ Both of these can coexist as two separate extensions, so there's no need to rein
   - removed due to less-than-optimal communication times between `popup.html`/`popup.js` and `background.js`
 - Better background script error handling
 - Up manifest to v3
+- Automatically save on tab close, even if the running interval isn't up yet

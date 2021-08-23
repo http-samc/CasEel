@@ -8,7 +8,7 @@ function saveNotebook() {
 
     try {
         chrome.tabs.executeScript({
-            file: 'assets/js/saveNotebooks.js'
+            file: "assets/js/saveNotebooks.js"
         }, function() {
             if (chrome.runtime.lastError) {
                 // no major error we just aren't on netmath
@@ -19,11 +19,11 @@ function saveNotebook() {
     }
     catch (e) {
         return;
-    };
+    }
 };
 
 function sleep(s) {
-    return new Promise(resolve => setTimeout(resolve, s*1000));
+    return new Promise((resolve) => setTimeout(resolve, s*1000));
 };
 
 async function autoSave() {
