@@ -22,19 +22,10 @@ function sleep(s) {
 
 async function autoSave() {
     while (true) {
-        var delay = parseInt(document.getElementById("interval").value);
-        console.log(`Waiting ${delay} seconds to save . . .`);
-
+        var delay = 90;
         await sleep(delay);
         saveNotebook();
-        console.log(`Saved!`)
     };
 };
 
-window.onload = function() {
-    let start = document.getElementById("start");
-    start.addEventListener("click", function () {
-        console.log("Starting autosaver!");
-        autoSave();
-    });
-};
+autoSave();

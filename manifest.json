@@ -16,15 +16,10 @@
         "http://courseware.illinois.edu/*",
         "https://courseware.illinois.edu/*"
     ],
-    "content_scripts": [
-        {
-            "matches": [
-                "http://courseware.illinois.edu/*",
-                "https://courseware.illinois.edu/*"
-            ],
-            "js": [
-                "assets/js/contentScript.js"
-            ]
-        }
-    ]
+    "background": {
+        "scripts": [
+            "assets/js/background.js"
+        ],
+        "persistent": false
+    }
 }
