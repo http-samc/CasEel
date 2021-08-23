@@ -1,6 +1,9 @@
 # ⚡ CasEel ⚡
 A Chrome Extension for autosaving NetMath notebooks!
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f3208ae1a0ac42858f707ab96fa4df58)](https://www.codacy.com/gh/http-samc/CasEel/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=http-samc/CasEel&amp;utm_campaign=Badge_Grade)
+
+## What is it?
 CasEel adds autosaving functionality to the [NetMath](https://courseware.illinois.edu) platform, which provides interactive digital courses in a variety of math levels and integrates Mathematica as a calculator.
 
 Unfortunately, hard work can be lost in an instant if you forget to save manually. That's why I created CasEel, the autosaver for NetMath.
@@ -17,7 +20,7 @@ This software is released under the BSD 3 Clause license. You may use it commerc
 ## Contributing
 If you can help acomplish any of the TODO's, please make a PR!
 
-However, CasEel was made specifically for autosaving. There are other great tools, like [AutoCCM](https://github.com/gabeclasson/Auto-CCM) that already implement other quality of life features!
+Keep in mind CasEel was made specifically for autosaving. There are other great tools, like [AutoCCM](https://github.com/gabeclasson/Auto-CCM) that already implement other quality of life features!
 
 Both of these can coexist as two separate extensions, so there's no need to reinvent the wheel.
 
