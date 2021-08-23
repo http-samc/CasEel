@@ -9,6 +9,12 @@ function saveNotebook() {
     try {
         chrome.tabs.executeScript({
             file: 'assets/js/saveNotebooks.js'
+        }, function() {
+            if (chrome.runtime.lastError) {
+                // no major error we just aren't on netmath
+                // and therefore can't access the DOM
+                console.warn("IGNORE ME: " + chrome.runtime.lastError.message);
+            }
         });
     }
     catch (e) {
