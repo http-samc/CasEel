@@ -28,7 +28,7 @@ function sleep(s) {
 
 async function autoSave() {
     while (true) {
-        var delay = 90;
+        var delay = 60;
         await sleep(delay);
         saveNotebook();
     };
